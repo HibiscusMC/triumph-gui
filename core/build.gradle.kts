@@ -44,8 +44,8 @@ tasks {
                 }
                 pom {
                     name.set("Triumph GUI")
-                    description.set("Library for easy creation of GUIs for Bukkit plugins.")
-                    url.set("https://github.com/TriumphTeam/triumph-gui")
+                    description.set("Fork of TriumphGUI with first-class Paper support.")
+                    url.set("https://github.com/HibiscusMC/triumph-gui")
 
                     licenses {
                         license {
@@ -64,9 +64,9 @@ tasks {
                     }
 
                     scm {
-                        connection.set("scm:git:git://github.com/TriumphTeam/triumph-gui.git")
-                        developerConnection.set("scm:git:ssh://github.com:TriumphTeam/triumph-gui.git")
-                        url.set("https://github.com/TriumphTeam/triumph-gui")
+                        connection.set("scm:git:git://github.com/HibiscusMC/triumph-gui.git")
+                        developerConnection.set("scm:git:ssh://github.com:HibiscusMC/triumph-gui.git")
+                        url.set("https://github.com/HibiscusMC/triumph-gui")
                     }
                 }
             }
