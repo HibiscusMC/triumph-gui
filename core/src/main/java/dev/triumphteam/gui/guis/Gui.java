@@ -31,6 +31,7 @@ import dev.triumphteam.gui.builder.gui.StorageBuilder;
 import dev.triumphteam.gui.components.GuiType;
 import dev.triumphteam.gui.components.InteractionModifier;
 import dev.triumphteam.gui.components.ScrollType;
+import net.kyori.adventure.text.Component;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
@@ -45,12 +46,12 @@ public class Gui extends BaseGui {
      * Main constructor for the GUI
      *
      * @param rows                 The amount of rows the GUI should have
-     * @param title                The GUI's title using {@link String}
+     * @param title                The GUI's title.
      * @param interactionModifiers A set containing the {@link InteractionModifier} this GUI should use
      * @author SecretX
      * @since 3.0.3
      */
-    public Gui(final int rows, @NotNull final String title, @NotNull final Set<InteractionModifier> interactionModifiers) {
+    public Gui(final int rows, @NotNull final Component title, @NotNull final Set<InteractionModifier> interactionModifiers) {
         super(rows, title, interactionModifiers);
     }
 
@@ -58,12 +59,11 @@ public class Gui extends BaseGui {
      * Alternative constructor that takes both a {@link GuiType} and a set of {@link InteractionModifier}
      *
      * @param guiType              The {@link GuiType} to be used
-     * @param title                The GUI's title using {@link String}
+     * @param title                The GUI's title.
      * @param interactionModifiers A set containing the {@link InteractionModifier} this GUI should use
-     * @author SecretX
      * @since 3.0.3
      */
-    public Gui(@NotNull final GuiType guiType, @NotNull final String title, @NotNull final Set<InteractionModifier> interactionModifiers) {
+    public Gui(@NotNull final GuiType guiType, @NotNull final Component title, @NotNull final Set<InteractionModifier> interactionModifiers) {
         super(guiType, title, interactionModifiers);
     }
 
@@ -72,10 +72,10 @@ public class Gui extends BaseGui {
      *
      * @param rows  The amount of rows the GUI should have
      * @param title The GUI's title
-     * @deprecated In favor of {@link Gui#Gui(int, String, Set)}
+     * @deprecated In favor of {@link Gui#Gui(int, Component, Set)}
      */
     @Deprecated
-    public Gui(final int rows, @NotNull final String title) {
+    public Gui(final int rows, @NotNull final Component title) {
         super(rows, title);
     }
 
@@ -83,10 +83,10 @@ public class Gui extends BaseGui {
      * Alternative constructor that defaults to 1 row
      *
      * @param title The GUI's title
-     * @deprecated In favor of {@link Gui#Gui(int, String, Set)}
+     * @deprecated In favor of {@link Gui#Gui(int, Component, Set)}
      */
     @Deprecated
-    public Gui(@NotNull final String title) {
+    public Gui(@NotNull final Component title) {
         super(1, title);
     }
 
@@ -95,10 +95,10 @@ public class Gui extends BaseGui {
      *
      * @param guiType The {@link GuiType} to be used
      * @param title   The GUI's title
-     * @deprecated In favor of {@link Gui#Gui(GuiType, String, Set)}
+     * @deprecated In favor of {@link Gui#Gui(GuiType, Component, Set)}
      */
     @Deprecated
-    public Gui(@NotNull final GuiType guiType, @NotNull final String title) {
+    public Gui(@NotNull final GuiType guiType, @NotNull final Component title) {
         super(guiType, title);
     }
 

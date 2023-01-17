@@ -25,7 +25,6 @@
 package dev.triumphteam.gui.builder.gui;
 
 import dev.triumphteam.gui.components.GuiType;
-import dev.triumphteam.gui.components.util.Legacy;
 import dev.triumphteam.gui.guis.Gui;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
@@ -72,11 +71,10 @@ public final class SimpleBuilder extends BaseGuiBuilder<Gui, SimpleBuilder> {
     @Contract(" -> new")
     public Gui create() {
         final Gui gui;
-        final String title = Legacy.SERIALIZER.serialize(getTitle());
         if (guiType == null || guiType == GuiType.CHEST) {
-            gui = new Gui(getRows(), title, getModifiers());
+            gui = new Gui(getRows(), getTitle(), getModifiers());
         } else {
-            gui = new Gui(guiType, title, getModifiers());
+            gui = new Gui(guiType, getTitle(), getModifiers());
         }
 
         final Consumer<Gui> consumer = getConsumer();

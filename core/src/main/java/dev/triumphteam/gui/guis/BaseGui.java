@@ -29,7 +29,6 @@ import dev.triumphteam.gui.components.GuiType;
 import dev.triumphteam.gui.components.InteractionModifier;
 import dev.triumphteam.gui.components.exception.GuiException;
 import dev.triumphteam.gui.components.util.GuiFiller;
-import dev.triumphteam.gui.components.util.Legacy;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.HumanEntity;
@@ -78,7 +77,7 @@ public abstract class BaseGui implements InventoryHolder {
     private Inventory inventory;
 
     // title
-    private String title;
+    private Component title;
 
     // Gui filler.
     private final GuiFiller filler = new GuiFiller(this);
@@ -121,11 +120,11 @@ public abstract class BaseGui implements InventoryHolder {
      * The main constructor, using {@link String}.
      *
      * @param rows                 The amount of rows to use.
-     * @param title                The GUI title using {@link String}.
+     * @param title                The GUI's title.
      * @param interactionModifiers Modifiers to select which interactions are allowed.
      * @since 3.0.0.
      */
-    public BaseGui(final int rows, @NotNull final String title, @NotNull final Set<InteractionModifier> interactionModifiers) {
+    public BaseGui(final int rows, @NotNull final Component title, @NotNull final Set<InteractionModifier> interactionModifiers) {
         int finalRows = rows;
         if (!(rows >= 1 && rows <= 6)) finalRows = 1;
         this.rows = finalRows;
@@ -141,11 +140,11 @@ public abstract class BaseGui implements InventoryHolder {
      * Alternative constructor that takes {@link GuiType} instead of rows number.
      *
      * @param guiType              The {@link GuiType} to use.
-     * @param title                The GUI title using {@link String}.
+     * @param title                The GUI's title.
      * @param interactionModifiers Modifiers to select which interactions are allowed.
      * @since 3.0.0
      */
-    public BaseGui(@NotNull final GuiType guiType, @NotNull final String title, @NotNull final Set<InteractionModifier> interactionModifiers) {
+    public BaseGui(@NotNull final GuiType guiType, @NotNull final Component title, @NotNull final Set<InteractionModifier> interactionModifiers) {
         this.guiType = guiType;
         this.interactionModifiers = safeCopyOf(interactionModifiers);
         this.title = title;
@@ -171,11 +170,11 @@ public abstract class BaseGui implements InventoryHolder {
      * Legacy constructor that takes rows and title.
      *
      * @param rows  The amount of rows the GUI should have.
-     * @param title The GUI title.
-     * @deprecated In favor of {@link BaseGui#BaseGui(int, String, Set)}.
+     * @param title The GUI's title.
+     * @deprecated In favor of {@link BaseGui#BaseGui(int, Component, Set)}.
      */
     @Deprecated
-    public BaseGui(final int rows, @NotNull final String title) {
+    public BaseGui(final int rows, @NotNull final Component title) {
         int finalRows = rows;
         if (!(rows >= 1 && rows <= 6)) finalRows = 1;
         this.rows = finalRows;
@@ -191,11 +190,11 @@ public abstract class BaseGui implements InventoryHolder {
      * Alternative constructor that takes {@link GuiType} instead of rows number.
      *
      * @param guiType The {@link GuiType} to use.
-     * @param title   The GUI title.
-     * @deprecated In favor of {@link BaseGui#BaseGui(GuiType, String, Set)}.
+     * @param title   The GUI's title.
+     * @deprecated In favor of {@link BaseGui#BaseGui(GuiType, Component, Set)}.
      */
     @Deprecated
-    public BaseGui(@NotNull final GuiType guiType, @NotNull final String title) {
+    public BaseGui(@NotNull final GuiType guiType, @NotNull final Component title) {
         this.guiType = guiType;
         this.interactionModifiers = EnumSet.noneOf(InteractionModifier.class);
         this.title = title;
@@ -206,24 +205,13 @@ public abstract class BaseGui implements InventoryHolder {
     }
 
     /**
-     * Gets the GUI's title as string.
+     * Gets the GUI's title.
      *
      * @return The GUI's title.
      */
     @NotNull
-    @Deprecated
-    public String getTitle() {
-        return title;
-    }
-
-    /**
-     * Gets the GUI title as a {@link Component}.
-     *
-     * @return The GUI title {@link Component}.
-     */
-    @NotNull
     public Component title() {
-        return Legacy.SERIALIZER.deserialize(title);
+        return title;
     }
 
     /**
@@ -535,7 +523,7 @@ public abstract class BaseGui implements InventoryHolder {
      */
     @Contract("_ -> this")
     @NotNull
-    public BaseGui updateTitle(@NotNull final String title) {
+    public BaseGui updateTitle(@NotNull final Component title) {
         updating = true;
 
         final List<HumanEntity> viewers = new ArrayList<>(inventory.getViewers());

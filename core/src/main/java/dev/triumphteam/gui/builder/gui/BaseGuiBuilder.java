@@ -69,7 +69,7 @@ public abstract class BaseGuiBuilder<G extends BaseGui, B extends BaseGuiBuilder
      * Sets the title for the GUI
      * This will be either a Component or a String
      *
-     * @param title The GUI title
+     * @param title The GUI's title.
      * @return The builder
      */
     @NotNull
@@ -277,9 +277,8 @@ public abstract class BaseGuiBuilder<G extends BaseGui, B extends BaseGuiBuilder
     @NotNull
     protected Component getTitle() {
         if (title == null) {
-            throw new GuiException("GUI title is missing!");
+            throw new GuiException("The GUI's title is missing!");
         }
-
         return title;
     }
 

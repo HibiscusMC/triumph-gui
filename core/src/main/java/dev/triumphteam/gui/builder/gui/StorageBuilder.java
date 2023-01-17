@@ -24,7 +24,6 @@
  */
 package dev.triumphteam.gui.builder.gui;
 
-import dev.triumphteam.gui.components.util.Legacy;
 import dev.triumphteam.gui.guis.StorageGui;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
@@ -45,7 +44,7 @@ public final class StorageBuilder extends BaseGuiBuilder<StorageGui, StorageBuil
     @Override
     @Contract(" -> new")
     public StorageGui create() {
-        final StorageGui gui = new StorageGui(getRows(), Legacy.SERIALIZER.serialize(getTitle()), getModifiers());
+        final StorageGui gui = new StorageGui(getRows(), getTitle(), getModifiers());
 
         final Consumer<StorageGui> consumer = getConsumer();
         if (consumer != null) consumer.accept(gui);

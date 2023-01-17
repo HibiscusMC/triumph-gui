@@ -25,6 +25,7 @@
 package dev.triumphteam.gui.guis;
 
 import dev.triumphteam.gui.components.Serializable;
+import net.kyori.adventure.text.Component;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.HumanEntity;
 import org.bukkit.inventory.Inventory;
@@ -57,7 +58,7 @@ class PersistentPaginatedGui extends PaginatedGui implements Serializable {
      * @param title    The GUI's title
      * @param pages    How many pages will be used
      */
-    public PersistentPaginatedGui(final int rows, final int pageSize, @NotNull final String title, final int pages) {
+    public PersistentPaginatedGui(final int rows, final int pageSize, @NotNull final Component title, final int pages) {
         super(rows, pageSize, title);
 
         if (pages <= 0) {
@@ -76,7 +77,7 @@ class PersistentPaginatedGui extends PaginatedGui implements Serializable {
      *
      * @param title The GUI's title
      */
-    public PersistentPaginatedGui(@NotNull final String title) {
+    public PersistentPaginatedGui(@NotNull final Component title) {
         this(1, title);
     }
 
@@ -86,7 +87,7 @@ class PersistentPaginatedGui extends PaginatedGui implements Serializable {
      * @param rows  The rows the GUI should have
      * @param title The GUI's title
      */
-    public PersistentPaginatedGui(final int rows, @NotNull final String title) {
+    public PersistentPaginatedGui(final int rows, @NotNull final Component title) {
         this(rows, 0, title, 1);
     }
 
@@ -96,7 +97,7 @@ class PersistentPaginatedGui extends PaginatedGui implements Serializable {
      * @param title The GUI's title
      * @param pages How many pages will be used
      */
-    public PersistentPaginatedGui(@NotNull final String title, final int pages) {
+    public PersistentPaginatedGui(@NotNull final Component title, final int pages) {
         this(1, 0, title, pages);
     }
 
@@ -107,7 +108,7 @@ class PersistentPaginatedGui extends PaginatedGui implements Serializable {
      * @param title The GUI's title
      * @param pages How many pages will be used
      */
-    public PersistentPaginatedGui(final int rows, @NotNull final String title, final int pages) {
+    public PersistentPaginatedGui(final int rows, @NotNull final Component title, final int pages) {
         this(rows, 0, title, pages);
     }
 

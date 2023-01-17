@@ -25,6 +25,7 @@
 package dev.triumphteam.gui.guis;
 
 import dev.triumphteam.gui.components.InteractionModifier;
+import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.HumanEntity;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -59,12 +60,12 @@ public class PaginatedGui extends BaseGui {
      *
      * @param rows                 The amount of rows the GUI should have
      * @param pageSize             The page size.
-     * @param title                The GUI's title using {@link String}
+     * @param title                The GUI's title.
      * @param interactionModifiers A set containing what {@link InteractionModifier} this GUI should have
      * @author SecretX
      * @since 3.0.3
      */
-    public PaginatedGui(final int rows, final int pageSize, @NotNull final String title, @NotNull final Set<InteractionModifier> interactionModifiers) {
+    public PaginatedGui(final int rows, final int pageSize, @NotNull final Component title, @NotNull final Set<InteractionModifier> interactionModifiers) {
         super(rows, title, interactionModifiers);
         this.pageSize = pageSize;
         int inventorySize = rows * 9;
@@ -77,10 +78,10 @@ public class PaginatedGui extends BaseGui {
      * @param rows     The rows the GUI should have
      * @param pageSize The pageSize
      * @param title    The GUI's title
-     * @deprecated In favor of {@link PaginatedGui#PaginatedGui(int, int, String, Set)}
+     * @deprecated In favor of {@link PaginatedGui#PaginatedGui(int, int, Component, Set)}
      */
     @Deprecated
-    public PaginatedGui(final int rows, final int pageSize, @NotNull final String title) {
+    public PaginatedGui(final int rows, final int pageSize, @NotNull final Component title) {
         super(rows, title);
         this.pageSize = pageSize;
         int inventorySize = rows * 9;
@@ -92,10 +93,10 @@ public class PaginatedGui extends BaseGui {
      *
      * @param rows  The rows the GUI should have
      * @param title The GUI's title
-     * @deprecated In favor of {@link PaginatedGui#PaginatedGui(int, int, String, Set)}
+     * @deprecated In favor of {@link PaginatedGui#PaginatedGui(int, int, Component, Set)}
      */
     @Deprecated
-    public PaginatedGui(final int rows, @NotNull final String title) {
+    public PaginatedGui(final int rows, @NotNull final Component title) {
         this(rows, 0, title);
     }
 
@@ -103,10 +104,10 @@ public class PaginatedGui extends BaseGui {
      * Alternative constructor that only requires title
      *
      * @param title The GUI's title
-     * @deprecated In favor of {@link PaginatedGui#PaginatedGui(int, int, String, Set)}
+     * @deprecated In favor of {@link PaginatedGui#PaginatedGui(int, int, Component, Set)}
      */
     @Deprecated
-    public PaginatedGui(@NotNull final String title) {
+    public PaginatedGui(@NotNull final Component title) {
         this(2, title);
     }
 
@@ -259,7 +260,7 @@ public class PaginatedGui extends BaseGui {
     }
 
     /**
-     * Overrides {@link BaseGui#updateTitle(String)} to use the paginated populator instead
+     * Overrides {@link BaseGui#updateTitle(Component)} to use the paginated populator instead
      * Updates the title of the GUI
      * <i>This method may cause LAG if used on a loop</i>
      *
@@ -268,7 +269,7 @@ public class PaginatedGui extends BaseGui {
      */
     @Override
     @NotNull
-    public BaseGui updateTitle(@NotNull final String title) {
+    public BaseGui updateTitle(@NotNull final Component title) {
         setUpdating(true);
 
         final List<HumanEntity> viewers = new ArrayList<>(getInventory().getViewers());

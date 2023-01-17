@@ -25,6 +25,7 @@
 package dev.triumphteam.gui.guis;
 
 import dev.triumphteam.gui.components.InteractionModifier;
+import net.kyori.adventure.text.Component;
 import org.bukkit.entity.HumanEntity;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
@@ -44,11 +45,11 @@ public class StorageGui extends BaseGui {
      * Main constructor for the StorageGui
      *
      * @param rows                 The amount of rows the GUI should have
-     * @param title                The GUI's title using {@link String}
+     * @param title                The GUI's title.
      * @param interactionModifiers A set containing the {@link InteractionModifier} this GUI should use
      * @since 3.0.3
      */
-    public StorageGui(final int rows, @NotNull final String title, @NotNull final Set<InteractionModifier> interactionModifiers) {
+    public StorageGui(final int rows, @NotNull final Component title, @NotNull final Set<InteractionModifier> interactionModifiers) {
         super(rows, title, interactionModifiers);
     }
 
@@ -59,7 +60,7 @@ public class StorageGui extends BaseGui {
      * @param title The GUI's title
      */
     @Deprecated
-    public StorageGui(final int rows, @NotNull final String title) {
+    public StorageGui(final int rows, @NotNull final Component title) {
         super(rows, title);
     }
 
@@ -69,7 +70,7 @@ public class StorageGui extends BaseGui {
      * @param title The GUI's title
      */
     @Deprecated
-    public StorageGui(@NotNull final String title) {
+    public StorageGui(@NotNull final Component title) {
         super(1, title);
     }
 
