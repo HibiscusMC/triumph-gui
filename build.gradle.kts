@@ -18,8 +18,8 @@ subprojects {
         plugin("com.github.hierynomus.license")
     }
 
-    group = "dev.triumphteam"
-    version = "3.1.4"
+    group = "com.hibiscusmc"
+    version = "0.1.0"
 
     dependencies {
         compileOnly("org.jetbrains:annotations:21.0.1")
