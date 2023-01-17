@@ -1,13 +1,13 @@
 plugins {
     id("java-library")
     id("com.github.hierynomus.license") version "0.16.1"
+    id("com.github.ben-manes.versions") version "0.44.0"
 }
 
 allprojects {
     repositories {
-        mavenLocal()
         mavenCentral()
-        maven("https://hub.spigotmc.org/nexus/content/groups/public/")
+        maven("https://repo.papermc.io/repository/maven-public/")
     }
 }
 
@@ -22,10 +22,11 @@ subprojects {
     version = "0.1.0"
 
     dependencies {
-        compileOnly("org.jetbrains:annotations:21.0.1")
-        compileOnly("org.spigotmc:spigot-api:1.18.1-R0.1-SNAPSHOT")
+        compileOnly("org.jetbrains:annotations:24.0.0")
+        compileOnly("io.papermc.paper:paper-api:1.19.3-R0.1-SNAPSHOT")
+        implementation("commons-lang:commons-lang:2.6")
 
-        val adventureVersion = "4.11.0"
+        val adventureVersion = "4.12.0"
         api("net.kyori:adventure-api:$adventureVersion")
         api("net.kyori:adventure-text-serializer-legacy:$adventureVersion")
         api("net.kyori:adventure-text-serializer-gson:$adventureVersion")
