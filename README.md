@@ -1,30 +1,14 @@
-<img src="https://cdn.discordapp.com/attachments/431545763928211457/853353180271214662/mfthread.png">
-<h1 align="center">Welcome to triumph-gui 👋</h1>
+# HibiscusMC's Fork of Triumph GUI
+
 <p>
-  <img src="https://img.shields.io/github/license/TriumphTeam/triumph-gui?color=blue&style=flat-square"  alt="license"/>
-  <a href="https://search.maven.org/artifact/dev.triumphteam/triumph-gui"><img src="https://img.shields.io/github/v/release/TriumphTeam/triumph-gui?color=green&style=flat-square" alt="release"></a>
-<a href="https://mattstudios.me/discord"><img src="https://img.shields.io/discord/493380790718038028?label=discord&style=flat-square"  alt="language"/></a>
+    <img src="https://img.shields.io/github/license/HibiscusMC/triumph-gui?style=flat-square&color=5AA" alt="license">
+    <a href="https://repo.hibiscusmc.com"><img src="https://img.shields.io/static/v1?label=repo&message=repo.hibiscusmc.com&style=flat-square&color=5A5" alt="repo"></a>
+    <a href="https://discord.com/invite/pcm8kWrdNt"><img src="https://img.shields.io/discord/930592346201026590?label=discord&style=flat-square&color=5865F2" alt="discord"></a>
 </p>
 
-> This lib was made to simplify the creation of GUIs.
+This is a fork of [TriumphTeam/triumph-gui](https://github.com/TriumphTeam/triumph-gui) with first-class Paper support.
+Specifically, it was made to avoid issues that can occur when serializing adventure components to legacy-formatted
+strings when dealing with GUI titles.
 
-## Author
-
-👤 **TriumphTeam**
-
-* Documentation: https://triumphteam.dev/library/triumph-gui 🚧 **work in progress**
-* Maven Central: https://search.maven.org/artifact/dev.triumphteam/triumph-gui
-* Github: [@ipsk](https://github.com/ipsk)
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/TriumphTeam/triumph-gui/issues).
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
-## 📝 License
-
-Copyright © 2021 [TriumphTeam](https://github.com/ipsk).<br />
-This project is [MIT](https://github.com/TriumphTeam/triumph-gui/blob/master/LICENSE) licensed.
+It also generally tidies up parts of the project, such as updating dependencies, cleaning up Javadoc comments, and
+removing deprecated cruft.
