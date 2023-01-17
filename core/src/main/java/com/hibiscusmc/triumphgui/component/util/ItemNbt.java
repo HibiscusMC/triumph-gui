@@ -22,11 +22,11 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.hibiscusmc.triumphgui.components.util;
+package com.hibiscusmc.triumphgui.component.util;
 
-import com.hibiscusmc.triumphgui.components.nbt.LegacyNbt;
-import com.hibiscusmc.triumphgui.components.nbt.NbtWrapper;
-import com.hibiscusmc.triumphgui.components.nbt.Pdc;
+import com.hibiscusmc.triumphgui.component.nbt.LegacyNbt;
+import com.hibiscusmc.triumphgui.component.nbt.NbtWrapper;
+import com.hibiscusmc.triumphgui.component.nbt.Pdc;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 

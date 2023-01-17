@@ -22,10 +22,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.hibiscusmc.triumphgui.components.util;
+package com.hibiscusmc.triumphgui.component.util;
 
 import com.google.common.primitives.Ints;
-import com.hibiscusmc.triumphgui.components.exception.GuiException;
+import com.hibiscusmc.triumphgui.component.exception.GuiException;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.jetbrains.annotations.NotNull;

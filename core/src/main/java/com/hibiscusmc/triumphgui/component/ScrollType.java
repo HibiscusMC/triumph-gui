@@ -22,9 +22,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.hibiscusmc.triumphgui.components;
+package com.hibiscusmc.triumphgui.component;
 
-import com.hibiscusmc.triumphgui.guis.ScrollingGui;
+import com.hibiscusmc.triumphgui.gui.ScrollingGui;
 
 /**
  * Possible Scroll types for the {@link ScrollingGui}

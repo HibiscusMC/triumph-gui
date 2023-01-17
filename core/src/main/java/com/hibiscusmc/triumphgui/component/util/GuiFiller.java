@@ -22,13 +22,13 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.hibiscusmc.triumphgui.components.util;
+package com.hibiscusmc.triumphgui.component.util;
 
-import com.hibiscusmc.triumphgui.components.GuiType;
-import com.hibiscusmc.triumphgui.components.exception.GuiException;
-import com.hibiscusmc.triumphgui.guis.BaseGui;
-import com.hibiscusmc.triumphgui.guis.GuiItem;
-import com.hibiscusmc.triumphgui.guis.PaginatedGui;
+import com.hibiscusmc.triumphgui.component.GuiType;
+import com.hibiscusmc.triumphgui.component.exception.GuiException;
+import com.hibiscusmc.triumphgui.gui.BaseGui;
+import com.hibiscusmc.triumphgui.gui.GuiItem;
+import com.hibiscusmc.triumphgui.gui.PaginatedGui;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;

@@ -24,8 +24,8 @@
  */
 package com.hibiscusmc.triumphgui.builder.item;
 
-import com.hibiscusmc.triumphgui.components.exception.GuiException;
-import com.hibiscusmc.triumphgui.components.util.SkullUtil;
+import com.hibiscusmc.triumphgui.component.exception.GuiException;
+import com.hibiscusmc.triumphgui.component.util.SkullUtil;
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
 import org.bukkit.Material;

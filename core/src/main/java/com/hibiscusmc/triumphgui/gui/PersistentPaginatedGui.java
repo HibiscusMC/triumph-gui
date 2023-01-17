@@ -22,9 +22,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.hibiscusmc.triumphgui.guis;
+package com.hibiscusmc.triumphgui.gui;
 
-import com.hibiscusmc.triumphgui.components.Serializable;
+import com.hibiscusmc.triumphgui.component.Serializable;
 import net.kyori.adventure.text.Component;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.HumanEntity;

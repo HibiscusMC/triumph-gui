@@ -24,10 +24,10 @@
  */
 package com.hibiscusmc.triumphgui.builder.gui;
 
-import com.hibiscusmc.triumphgui.components.GuiType;
-import com.hibiscusmc.triumphgui.components.InteractionModifier;
-import com.hibiscusmc.triumphgui.components.exception.GuiException;
-import com.hibiscusmc.triumphgui.guis.BaseGui;
+import com.hibiscusmc.triumphgui.component.GuiType;
+import com.hibiscusmc.triumphgui.component.InteractionModifier;
+import com.hibiscusmc.triumphgui.component.exception.GuiException;
+import com.hibiscusmc.triumphgui.gui.BaseGui;
 import net.kyori.adventure.text.Component;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;

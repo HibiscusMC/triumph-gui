@@ -22,10 +22,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.hibiscusmc.triumphgui.guis;
+package com.hibiscusmc.triumphgui.gui;
 
-import com.hibiscusmc.triumphgui.components.GuiAction;
-import com.hibiscusmc.triumphgui.components.util.ItemNbt;
+import com.hibiscusmc.triumphgui.component.GuiAction;
+import com.hibiscusmc.triumphgui.component.util.ItemNbt;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;

@@ -24,8 +24,8 @@
  */
 package com.hibiscusmc.triumphgui.builder.gui;
 
-import com.hibiscusmc.triumphgui.components.ScrollType;
-import com.hibiscusmc.triumphgui.guis.ScrollingGui;
+import com.hibiscusmc.triumphgui.component.ScrollType;
+import com.hibiscusmc.triumphgui.gui.ScrollingGui;
 import net.kyori.adventure.text.Component;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;

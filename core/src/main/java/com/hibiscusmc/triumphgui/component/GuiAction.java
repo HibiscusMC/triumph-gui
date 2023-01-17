@@ -22,10 +22,18 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.hibiscusmc.triumphgui.components.exception;
+package com.hibiscusmc.triumphgui.component;
 
-public final class GuiException extends RuntimeException {
-    public GuiException(String message) {
-        super(message);
-    }
+import org.bukkit.event.Event;
+
+@FunctionalInterface
+public interface GuiAction<T extends Event> {
+
+    /**
+     * Executes the event passed to it
+     *
+     * @param event Inventory action
+     */
+    void execute(final T event);
+
 }

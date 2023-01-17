@@ -22,16 +22,24 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.hibiscusmc.triumphgui.components;
+package com.hibiscusmc.triumphgui.component;
 
-import org.jetbrains.annotations.NotNull;
+import java.util.Collections;
+import java.util.EnumSet;
+import java.util.Set;
 
-import java.util.List;
+/**
+ * Used to control what kind of interaction can happen inside a GUI
+ *
+ * @since 3.0.0
+ * @author SecretX
+ */
+public enum InteractionModifier {
+    PREVENT_ITEM_PLACE,
+    PREVENT_ITEM_TAKE,
+    PREVENT_ITEM_SWAP,
+    PREVENT_ITEM_DROP,
+    PREVENT_OTHER_ACTIONS;
 
-public interface Serializable {
-
-    List<String> encodeGui();
-
-    void decodeGui(@NotNull final List<String> gui);
-
+    public static final Set<InteractionModifier> VALUES = Collections.unmodifiableSet(EnumSet.allOf(InteractionModifier.class));
 }

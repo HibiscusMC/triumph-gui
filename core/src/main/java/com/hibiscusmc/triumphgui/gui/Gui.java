@@ -22,15 +22,15 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.hibiscusmc.triumphgui.guis;
+package com.hibiscusmc.triumphgui.gui;
 
 import com.hibiscusmc.triumphgui.builder.gui.PaginatedBuilder;
 import com.hibiscusmc.triumphgui.builder.gui.ScrollingBuilder;
 import com.hibiscusmc.triumphgui.builder.gui.StorageBuilder;
-import com.hibiscusmc.triumphgui.components.GuiType;
-import com.hibiscusmc.triumphgui.components.ScrollType;
+import com.hibiscusmc.triumphgui.component.GuiType;
+import com.hibiscusmc.triumphgui.component.ScrollType;
 import com.hibiscusmc.triumphgui.builder.gui.SimpleBuilder;
-import com.hibiscusmc.triumphgui.components.InteractionModifier;
+import com.hibiscusmc.triumphgui.component.InteractionModifier;
 import net.kyori.adventure.text.Component;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;

@@ -22,10 +22,10 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.hibiscusmc.triumphgui.guis;
+package com.hibiscusmc.triumphgui.gui;
 
 import com.google.common.base.Preconditions;
-import com.hibiscusmc.triumphgui.components.InteractionModifier;
+import com.hibiscusmc.triumphgui.component.InteractionModifier;
 import org.bukkit.event.Event;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

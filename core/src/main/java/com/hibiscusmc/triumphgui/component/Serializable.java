@@ -22,18 +22,16 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.hibiscusmc.triumphgui.components;
+package com.hibiscusmc.triumphgui.component;
 
-import org.bukkit.event.Event;
+import org.jetbrains.annotations.NotNull;
 
-@FunctionalInterface
-public interface GuiAction<T extends Event> {
+import java.util.List;
 
-    /**
-     * Executes the event passed to it
-     *
-     * @param event Inventory action
-     */
-    void execute(final T event);
+public interface Serializable {
+
+    List<String> encodeGui();
+
+    void decodeGui(@NotNull final List<String> gui);
 
 }

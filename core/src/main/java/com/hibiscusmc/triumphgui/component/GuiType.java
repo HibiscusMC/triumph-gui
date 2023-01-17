@@ -22,24 +22,36 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.hibiscusmc.triumphgui.components;
+package com.hibiscusmc.triumphgui.component;
 
-import java.util.Collections;
-import java.util.EnumSet;
-import java.util.Set;
+import org.bukkit.event.inventory.InventoryType;
+import org.jetbrains.annotations.NotNull;
 
-/**
- * Used to control what kind of interaction can happen inside a GUI
- *
- * @since 3.0.0
- * @author SecretX
- */
-public enum InteractionModifier {
-    PREVENT_ITEM_PLACE,
-    PREVENT_ITEM_TAKE,
-    PREVENT_ITEM_SWAP,
-    PREVENT_ITEM_DROP,
-    PREVENT_OTHER_ACTIONS;
+// TODO COMMENTS
+public enum GuiType {
 
-    public static final Set<InteractionModifier> VALUES = Collections.unmodifiableSet(EnumSet.allOf(InteractionModifier.class));
+    CHEST(InventoryType.CHEST, 9),
+    WORKBENCH(InventoryType.WORKBENCH, 9),
+    HOPPER(InventoryType.HOPPER, 5),
+    DISPENSER(InventoryType.DISPENSER, 8),
+    BREWING(InventoryType.BREWING, 4);
+
+    @NotNull
+    private final InventoryType inventoryType;
+    private final int limit;
+
+    GuiType(@NotNull final InventoryType inventoryType, final int limit) {
+        this.inventoryType = inventoryType;
+        this.limit = limit;
+    }
+
+    @NotNull
+    public InventoryType getInventoryType() {
+        return inventoryType;
+    }
+
+    public int getLimit() {
+        return limit;
+    }
+
 }

@@ -22,7 +22,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.hibiscusmc.triumphgui.components.util;
+package com.hibiscusmc.triumphgui.component.util;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;

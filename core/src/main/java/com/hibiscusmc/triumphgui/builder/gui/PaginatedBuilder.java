@@ -24,7 +24,7 @@
  */
 package com.hibiscusmc.triumphgui.builder.gui;
 
-import com.hibiscusmc.triumphgui.guis.PaginatedGui;
+import com.hibiscusmc.triumphgui.gui.PaginatedGui;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 

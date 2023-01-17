@@ -24,8 +24,8 @@
  */
 package com.hibiscusmc.triumphgui.builder.gui;
 
-import com.hibiscusmc.triumphgui.components.GuiType;
-import com.hibiscusmc.triumphgui.guis.Gui;
+import com.hibiscusmc.triumphgui.component.GuiType;
+import com.hibiscusmc.triumphgui.gui.Gui;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 

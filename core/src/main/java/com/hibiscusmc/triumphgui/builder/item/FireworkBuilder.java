@@ -24,7 +24,7 @@
  */
 package com.hibiscusmc.triumphgui.builder.item;
 
-import com.hibiscusmc.triumphgui.components.exception.GuiException;
+import com.hibiscusmc.triumphgui.component.exception.GuiException;
 import org.bukkit.FireworkEffect;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;

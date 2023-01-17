@@ -22,7 +22,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.hibiscusmc.triumphgui.components.nbt;
+package com.hibiscusmc.triumphgui.component.nbt;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

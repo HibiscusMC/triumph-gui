@@ -24,8 +24,8 @@
  */
 package com.hibiscusmc.triumphgui.builder.item;
 
-import com.hibiscusmc.triumphgui.components.exception.GuiException;
-import com.hibiscusmc.triumphgui.components.util.Legacy;
+import com.hibiscusmc.triumphgui.component.exception.GuiException;
+import com.hibiscusmc.triumphgui.component.util.Legacy;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;

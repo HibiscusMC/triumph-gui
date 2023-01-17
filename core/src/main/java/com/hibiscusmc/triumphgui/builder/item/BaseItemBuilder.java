@@ -24,12 +24,12 @@
  */
 package com.hibiscusmc.triumphgui.builder.item;
 
-import com.hibiscusmc.triumphgui.components.exception.GuiException;
-import com.hibiscusmc.triumphgui.components.util.VersionHelper;
-import com.hibiscusmc.triumphgui.components.GuiAction;
-import com.hibiscusmc.triumphgui.components.util.ItemNbt;
-import com.hibiscusmc.triumphgui.components.util.Legacy;
-import com.hibiscusmc.triumphgui.guis.GuiItem;
+import com.hibiscusmc.triumphgui.component.exception.GuiException;
+import com.hibiscusmc.triumphgui.component.util.VersionHelper;
+import com.hibiscusmc.triumphgui.component.GuiAction;
+import com.hibiscusmc.triumphgui.component.util.ItemNbt;
+import com.hibiscusmc.triumphgui.component.util.Legacy;
+import com.hibiscusmc.triumphgui.gui.GuiItem;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.serializer.gson.GsonComponentSerializer;
 import org.apache.commons.lang.Validate;
