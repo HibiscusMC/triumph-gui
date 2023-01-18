@@ -25,10 +25,11 @@
 package com.hibiscusmc.triumphgui.gui;
 
 import com.hibiscusmc.triumphgui.component.exception.GuiException;
-import com.hibiscusmc.triumphgui.component.util.GuiFiller;
+import com.hibiscusmc.triumphgui.component.util.filler.GuiFiller;
 import com.hibiscusmc.triumphgui.component.GuiAction;
 import com.hibiscusmc.triumphgui.component.GuiType;
 import com.hibiscusmc.triumphgui.component.InteractionModifier;
+import com.hibiscusmc.triumphgui.component.util.filler.SettingGuiFiller;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.HumanEntity;
@@ -80,7 +81,7 @@ public abstract class BaseGui implements InventoryHolder {
     private Component title;
 
     // Gui filler.
-    private final GuiFiller filler = new GuiFiller(this);
+    private final GuiFiller filler = new SettingGuiFiller(this);
 
     private int rows = 1;
 
@@ -810,9 +811,9 @@ public abstract class BaseGui implements InventoryHolder {
     }
 
     /**
-     * Gets the {@link GuiFiller} that it's used for filling up the GUI in specific ways.
+     * Gets the {@link SettingGuiFiller} that it's used for filling up the GUI in specific ways.
      *
-     * @return The {@link GuiFiller}.
+     * @return The {@link SettingGuiFiller}.
      */
     @NotNull
     public GuiFiller getFiller() {
